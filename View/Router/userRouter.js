@@ -1,6 +1,6 @@
 const express=require("express");
 const router=express.Router();
-const user=require("/home/sourabh/Node/urlShortner/Model/user")
+const user=require(".../Model/user")
 
 
 router.route("/handleLogin")
