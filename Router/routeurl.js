@@ -20,7 +20,10 @@ router.post("/",async (req, res) => {
     await urlobject.save();
     console.log("Url object is ", urlobject);
 
-    res.status(201).send(`<h1>Short URL Generated http://localhost:${PORT}/url/${shortid}</h1>`);
+     const fullUrl = `${req.protocol}://${req.get('host')}/url/${shortid}`;
+  
+    // Send the full URL back in the response
+    res.status(201).send(`<h1>Short URL Generated: <a href="${fullUrl}">${fullUrl}</a></h1>`);
   })
 
 
