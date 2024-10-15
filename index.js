@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-connectWithDB("mongodb://127.0.0.1:27017/url");
+connectWithDB(DB_PATH);
   
 app.use("/",static);
 
